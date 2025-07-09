@@ -17,7 +17,7 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif; /* More elegant serif font */
   color: #ffffff;
-  font-weight: 300; /* Slightly lighter weight for sophistication */
+  font-weight: 200; /* Slightly lighter weight for sophistication */
 }
 
 a {
