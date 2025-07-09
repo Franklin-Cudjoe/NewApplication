@@ -8,14 +8,14 @@
 body {
   background-color: #111;
   color: #f5f5f5;
-   font-family: 'Playfair Display', serif; /* More elegant serif font */
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 /* Typography */
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif; /* More elegant serif font */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #ffffff;
   font-weight: 200; /* Slightly lighter weight for sophistication */
 }
