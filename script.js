@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product.images.forEach((imgSrc) => {
               const img = document.createElement("img");
-              img.src = imgSrc;
+              img.src = `https://newapplication-bk-1.onrender.com/${imgSrc}`;
               img.alt = product.name;
               img.classList.add("carousel-image");
               imageStrip.appendChild(img);
