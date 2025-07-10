@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load products for the main page
   function loadMainPageProducts() {
     if (productContainer) {
-      fetch("http://localhost:3000/products")
+      fetch("https://newapplication-bk-1.onrender.com/products")
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch products");
           return response.json();
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load products for the admin dashboard
   function loadProducts() {
     if (productTable) {
-      fetch("http://localhost:3000/products")
+      fetch("https://newapplication-bk-1.onrender.com/products")
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch products");
           return response.json();
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load messages for the admin dashboard
   function loadMessages() {
     if (messageTable) {
-      fetch("http://localhost:3000/api/messages")
+      fetch("https://newapplication-bk-1.onrender.com/api/messages")
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch messages");
           return response.json();
@@ -191,10 +191,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        const response = await fetch("http://localhost:3000/products", {
-          method: "POST",
-          body: formData,
-        });
+        const response = await fetch(
+          "https://newapplication-bk-1.onrender.com/products",
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
         if (response.ok) {
           alert("Product added successfully!");
           productForm.reset();
@@ -259,11 +262,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = e.target.message.value;
 
       try {
-        const response = await fetch("http://localhost:3000/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message }),
-        });
+        const response = await fetch(
+          "https://newapplication-bk-1.onrender.com/contact",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, message }),
+          }
+        );
         if (response.ok) {
           alert("Message sent successfully!");
           e.target.reset();
