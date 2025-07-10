@@ -666,7 +666,7 @@
 
     // Product functions
     function loadProducts() {
-      fetch("products")
+      fetch("https://newapplication-bk-1.onrender.com/products")
         .then(res => res.json())
         .then(products => {
           allProducts = products;
@@ -703,7 +703,7 @@
           <td>$${product.price}</td>
           <td>
             <div class="image-preview">
-              ${(product.images || []).map(img => `<img src="${img}" alt="${product.name}">`).join('')}
+              ${(product.images || []).map(img => `<img src="https://newapplication-bk-1.onrender.com/${img}" alt="${product.name}">`).join('')}
             </div>
           </td>
           <td>${product.scripture || '—'}</td>
