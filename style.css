@@ -108,7 +108,7 @@ nav a:hover::after {
   /* Background with fallback */
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), /* Dark overlay */
-    url('../contact-backend/images/IMG_8095.jpg') no-repeat center center/cover;
+    url('https://newapplication-bk-1.onrender.com/images/hero.jpg') no-repeat center center/cover;
   
   /* Text styling */
   color: white;
