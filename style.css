@@ -108,7 +108,7 @@ nav a:hover::after {
   /* Background with fallback */
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), /* Dark overlay */
-    url('images/IMG_8095.jpg') no-repeat center center/cover;
+    url('../contact-backend/images/IMG_8095.jpg') no-repeat center center/cover;
   
   /* Text styling */
   color: white;
@@ -117,7 +117,7 @@ nav a:hover::after {
 
 /* Troubleshooting additions */
 #hero::after {
-  content: "Image path: images/IMG_8095.jpg";
+  
   position: absolute;
   bottom: 10px;
   right: 10px;

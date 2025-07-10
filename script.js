@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load products for the admin dashboard
   function loadProducts() {
     if (productTable) {
-      fetch("http://localhost:3000/api/products")
+      fetch("http://localhost:3000/products")
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch products");
           return response.json();
