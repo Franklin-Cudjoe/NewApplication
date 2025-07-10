@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModal = document.querySelector(".modal .close");
   const productForm = document.getElementById("product-form");
   const cancelBtn = document.querySelector(".modal .cancel");
+  const urlglobal = "http://localhost:3000/"; //"https://newapplication-bk-1.onrender.com/"
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load products for the main page
   function loadMainPageProducts() {
     if (productContainer) {
-      fetch("https://newapplication-bk-1.onrender.com/products")
+      fetch(urlglobal + `products`)
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch products");
           return response.json();
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product.images.forEach((imgSrc) => {
               const img = document.createElement("img");
-              img.src = `https://newapplication-bk-1.onrender.com/${imgSrc}`;
+              img.src = urlglobal+`${imgSrc}`;
               img.alt = product.name;
               img.classList.add("carousel-image");
               imageStrip.appendChild(img);
@@ -94,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load products for the admin dashboard
   function loadProducts() {
     if (productTable) {
-      fetch("https://newapplication-bk-1.onrender.com/products")
+      fetch(urlglobal + `products`)
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch products");
           return response.json();
@@ -133,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load messages for the admin dashboard
   function loadMessages() {
     if (messageTable) {
-      fetch("https://newapplication-bk-1.onrender.com/api/messages")
+      fetch(urlglobal + `messages`)
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch messages");
           return response.json();
@@ -192,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const response = await fetch(
-          "https://newapplication-bk-1.onrender.com/products",
+          ""+urlglobal+" + `products`",
           {
             method: "POST",
             body: formData,
@@ -263,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const response = await fetch(
-          "https://newapplication-bk-1.onrender.com/contact",
+          urlglobal + "contact",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

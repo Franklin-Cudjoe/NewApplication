@@ -629,6 +629,9 @@
 </div>
 
   <script>
+    //Global variable declaration
+    const urlglobal = "http://localhost:3000/"; //"https://newapplication-bk-1.onrender.com/"
+
     // Authentication check
     if (localStorage.getItem("isAdmin") !== "true") {
       window.location.href = "admin-login.html";
@@ -666,7 +669,7 @@
 
     // Product functions
     function loadProducts() {
-      fetch("https://newapplication-bk-1.onrender.com/products")
+      fetch(urlglobal+"products")
         .then(res => res.json())
         .then(products => {
           allProducts = products;
@@ -703,7 +706,7 @@
           <td>$${product.price}</td>
           <td>
             <div class="image-preview">
-              ${(product.images || []).map(img => `<img src="https://newapplication-bk-1.onrender.com/${img}" alt="${product.name}">`).join('')}
+              ${(product.images || []).map(img => `<img src="`+urlglobal+`${img}" alt="${product.name}">`).join('')}
             </div>
           </td>
           <td>${product.scripture || '—'}</td>
@@ -828,7 +831,7 @@
       document.getElementById('product-price').value = product.price;
       document.getElementById('product-scripture').value = product.scripture || '';
       document.getElementById('current-images').innerHTML = 
-        (product.images || []).map(img => `<img src="${img}" alt="${product.name}">`).join('');
+        (product.images || []).map(img => `<img src="`+urlglobal+`${img}" alt="${product.name}">`).join('');
       window.editingProductIndex = idx;
       document.getElementById('product-modal').classList.add('active');
     }
@@ -841,7 +844,7 @@
     function deleteProduct(idx) {
       if (!confirm('Are you sure you want to delete this product? This action cannot be undone.')) return;
 
-      fetch(`https://newapplication-bk-1.onrender.com/products/${idx}`, {
+      fetch(``+urlglobal+`products/${idx}`, {
         method: 'DELETE'
       })
         .then(res => res.json())
@@ -857,7 +860,7 @@
 
     // Message functions
     function loadMessages() {
-      fetch('https://newapplication-bk-1.onrender.com/api/messages')
+      fetch(urlglobal + `messages`)
         .then(res => res.json())
         .then(messages => {
           allMessages = messages.reverse();
@@ -914,7 +917,7 @@ document.getElementById('product-form').onsubmit = async function(e) {
     }
   }
 
-  let url = 'https://newapplication-bk-1.onrender.com/products';
+  let url = urlglobal + 'products';
   let method = 'POST';
   
   if (window.editingProductIndex !== undefined && window.editingProductIndex !== null) {
