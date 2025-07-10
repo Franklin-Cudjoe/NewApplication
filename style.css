@@ -343,3 +343,88 @@ footer {
   font-size: 0.95rem;
   border-top: 1px solid #333;
 }
+
+/* Responsive Design for Phones */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  nav a {
+    font-size: 1.3rem;
+  }
+
+  #hero h2 {
+    font-size: 2.2rem;
+  }
+
+  #hero p {
+    font-size: 1.1rem;
+  }
+
+  #ShopNow {
+    padding: 0.6rem 2.5rem;
+    font-size: 1.3rem;
+  }
+
+  .carousel-wrapper {
+    height: 250px;
+  }
+
+  .product-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  button.add-to-cart {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  form button {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  section h3 {
+    font-size: 1.8rem;
+  }
+
+  #featured,
+  #shop,
+  #about,
+  #contact {
+    padding: 3rem 1rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 2rem 1rem;
+  }
+}
