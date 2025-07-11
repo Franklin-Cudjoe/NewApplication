@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load products for the main page
   function loadMainPageProducts() {
     if (productContainer) {
-      fetch(urlglobal + `products`)
+      fetch(`https://newapplication-bk-1.onrender.com/products`)
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch products");
           return response.json();
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             product.images.forEach((imgSrc) => {
               const img = document.createElement("img");
-              img.src = urlglobal+`${imgSrc}`;
+              img.src = `https://newapplication-bk-1.onrender.com/${imgSrc}`;
               img.alt = product.name;
               img.classList.add("carousel-image");
               imageStrip.appendChild(img);
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load products for the admin dashboard
   function loadProducts() {
     if (productTable) {
-      fetch(urlglobal + `products`)
+      fetch(`https://newapplication-bk-1.onrender.com/products`)
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch products");
           return response.json();
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load messages for the admin dashboard
   function loadMessages() {
     if (messageTable) {
-      fetch(urlglobal + `messages`)
+      fetch(`https://newapplication-bk-1.onrender.com/messages`)
         .then((response) => {
           if (!response.ok) throw new Error("Failed to fetch messages");
           return response.json();
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const response = await fetch(
-          ""+urlglobal+" + `products`",
+          `https://newapplication-bk-1.onrender.com/products`,
           {
             method: "POST",
             body: formData,
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const response = await fetch(
-          urlglobal + "contact",
+          `https://newapplication-bk-1.onrender.com/contact`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
