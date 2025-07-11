@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <h3>${product.name}</h3>
               <p class="scripture">${product.scripture}</p>
               <p class="price">$${product.price}</p>
-              <button class="add-to-cart">Add to Cart</button>
+              <button class="add-to-cart" style="display: none;">Add to Cart</button>
             `;
 
             card.appendChild(carouselWrapper);
